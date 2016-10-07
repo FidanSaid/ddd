@@ -1,0 +1,43 @@
+<form action="action_page.php">
+  <fieldset>
+    <legend>Personal information:</legend>
+    First name:<br>
+    <input type="text" name="firstname" >
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname">
+    <br>
+   E-mail:<br>
+    <input type="text" name="e-mail"<br>
+     <br>
+    <input type="submit" value="Submit"><br>
+  </fieldset>
+ <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other
+</form>
+<form action="action_page.php">
+  <select name="gifts">
+    <option value="watchs">Watchd</option>
+    <option value="shoes">Shoes</option>
+    <option value="bags" selected>Bags</option>
+    <option value="fragrances">Fragrances</option>
+    </select><br>
+     <input type="submit" value="Submit">
+     <br>
+<p>Enter a number and click OK:</p>
+
+<input id="id1" type="number" min="100" max="300" required>
+<button onclick="myFunction()">OK</button>
+
+<p>If the number is less than 100 or greater than 300, an error message will be displayed.</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var inpObj = document.getElementById("id1");
+    if (inpObj.checkValidity() == false) {
+        document.getElementById("demo").innerHTML = inpObj.validationMessage;
+    } else {
+        document.getElem

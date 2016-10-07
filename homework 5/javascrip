@@ -1,0 +1,38 @@
+function isOdd(number) {
+   if (number % 2 != 0) {
+       return true;
+   } else {
+       return false;
+   }
+}
+
+a = [8, 13, 17, 24, 4, 26, 19, 30, 2, 66, 40];
+x = 0;
+odd_min = INFINITY;
+even_min = INFINITY;
+while (x < a.length) {
+   if (isOdd(a[x])) {
+       print "odd";
+       if (a[x] < odd_min) {
+           odd_min = a[x];
+       }
+   } else {
+       print "even";
+       if (a[x] < even_min) {
+           even_min = a[x];
+       }
+   }
+   x = x + 1;
+}
+
+if (odd_min == INFINITY) {
+   print "No odd found";
+} else {
+   print odd_min;
+}
+
+if (even_min == INFINITY) {
+   print "No even found";
+} else {
+   print even_min;
+}
